@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PotentialCleavageAnalyzer</class>
+ <widget class="QMainWindow" name="PotentialCleavageAnalyzer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>941</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>911</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Initialization</string>
+    </property>
+    <widget class="QComboBox" name="combobox_level">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>438</x>
+       <y>93</y>
+       <width>161</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>Proteoform Level</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PrSMs Level</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTextBrowser" name="text_fasta_file">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>261</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_fasta_file">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>30</y>
+       <width>141</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Fasta File</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_initialization">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>30</y>
+       <width>141</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Initialization</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="text_proteoform_file">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>93</y>
+       <width>261</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_proteoform_file">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>93</y>
+       <width>141</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Proteoform File</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combobox_search">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>438</x>
+       <y>30</y>
+       <width>161</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>ProSight PD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sequence list</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TopPIC</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="combobox_pd_version">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>30</y>
+       <width>141</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>ProSight v4.2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ProSight v4.1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ProSight v4.0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string> </string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>911</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Vizualisation</string>
+    </property>
+    <widget class="QSplitter" name="splitter">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>731</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="button_export_2">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string> Truncations</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_export_3">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Potential Cleavage</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_export_4">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Methionine Cleavage</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_export">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Export Data</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>246</x>
+       <y>107</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>#PrSMs</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combo_accessions">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>131</y>
+       <width>311</width>
+       <height>45</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_analyze_accession">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>131</y>
+       <width>171</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analyze Accession</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>26</x>
+       <y>107</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Accession</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>116</x>
+       <y>107</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>#Proteoforms</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_plot_database_analysis">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>40</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analyze FASTA</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>941</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_initialization</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>initialization()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>680</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_proteoform_file</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>load_proteoform_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_fasta_file</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>load_fasta_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>combobox_level</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>change_level()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_plot_database_analysis</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>database_analysis()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>708</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>716</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_analyze_accession</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>analyze_accession()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>418</x>
+     <y>346</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_export_2</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>plot_truncations()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_export_3</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>plot_potential_cleavage_site()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_export_4</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>plot_methionine_cleavage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>529</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>840</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_export</sender>
+   <signal>clicked()</signal>
+   <receiver>PotentialCleavageAnalyzer</receiver>
+   <slot>export_data()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>840</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>load_fasta_file()</slot>
+  <slot>load_proteoform_file()</slot>
+  <slot>change_level()</slot>
+  <slot>initialization()</slot>
+  <slot>export_data()</slot>
+  <slot>database_analysis()</slot>
+  <slot>analyze_accession()</slot>
+  <slot>plot_potential_cleavage_site()</slot>
+  <slot>plot_truncations()</slot>
+  <slot>plot_methionine_cleavage()</slot>
+ </slots>
+</ui>
