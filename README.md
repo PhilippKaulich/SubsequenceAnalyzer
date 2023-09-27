@@ -1,4 +1,4 @@
-# TD Potential Cleavage Analyzer
+# Subsequence Analyzer
 
  <p align="center">
 <img src="https://img.shields.io/badge/python-3.9.13+-blue.svg" alt="Python Version"> 
