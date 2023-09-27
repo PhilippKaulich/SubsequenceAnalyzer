@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/badge/python-3.9.13+-blue.svg" alt="Python Version"> 
 <img src="https://img.shields.io/pypi/l/MSDIFF" alt="License">
 </p>
+
 **Summary**: The tool analyzes the proteoform termini and graphically displays various properties of the identified termini.
 
 **Input**: Sequence list of identified proteoforms or exported proteoform identifications from ProteomeDiscoverer and fasta file. As
@@ -14,11 +15,34 @@
 
 ## Contents
 
+- [Abstract](#abstract)
+- [Technical Description](#technical-description)
+- [Requirements](#requirements)
+    - [Packages](#packages)
+- [How to run the Script](#how-to-run-the-script)
+- [Input Data](#input-data)
+    - [Identified Proteoforms](#identified-proteoforms)
+    - [Fasta File](#fasta-file)
+- [Graphical User Interface](#graphical-user-interface)
+    - [Initialization](#initialization)
+    - [Visualization](#visualization)
+- [Data Sets for Testing](#data-sets-for-testing)
+- [Output](#output)
+    - [Potential cleavage analysis of subsequence proteoforms](#potential-cleavage-analysis-of-subsequence-proteoforms)
+    - [Analyze Potential Cleavage Fasta File](#analyze-potential-cleavage-fasta-file)
+    - [N-terminal Methionine Excision](#n-terminal-methionine-excision)
+    - [Number of Annotated and Subsequence Proteoforms](#number-of-annotated-and-subsequence-proteoforms)
+    - [Visualization of Identified Proteoforms for Specific Proteins](#visualization-of-identified-proteoforms-for-specific-proteins)
+- [Troubleshooting](#troubleshooting)
+- [Contributions](#contributions)
+- [Changelog](#changelog)
+- [References](#references)
+- [How to cite](#how-to-cite)
+- [License](#license)
 
 
-[TOC]
 
-## Introduction
+## Abstract
 
 Top-down Proteomics identifies intact proteoforms with all their modifications and truncations. Subsequence proteoforms arises from truncations of annotated proteoforms, which can occur, for example, due to proteolytic processing, alternative splicing or (artificial) chemical cleavage. 
 
@@ -87,7 +111,7 @@ Fasta file, which was also used for database search. If database search was perf
 
 ## Graphical User Interface 
 
-<center> <img src="Various\GUI_2.png" style="zoom:100%" alt="Result_Methionin_Cleavage"/></center>
+<img src="Various\GUI_2.PNG" style="zoom:100%" alt="GUI"/>
 
 **Figure 2**: Graphical User Interface.
 
@@ -137,14 +161,12 @@ As soon as 'Initalization' is pressed, the analysis starts. The progress of the 
 
 The tool identifies the X and X’ cleavage site of subsequence proteoforms, whereby X represents the N-terminal and X’ the C-terminal cleavage position, respectively. Both N-terminal and/or C-terminal truncated subsequence proteoforms are considered.  
 
-![Result_Heatmap](Various\Result_Heatmap.png)
+<img src="Various\Result_Heatmap.png" style="zoom:100%" alt="Result_Heatmap"/>
 
 **Figure 3**: Potential cleavage analysis plot. The heatmap shows the potential cleavage sites between two amino acids determined by the subsequence proteoforms, with the X site shown vertically and the X' site shown horizontally. The histograms show the total number of amino acids determined at the X' site (right) or at the X site (top). 
 
 
-
-![CMD_Output](Various\CMD_Output.PNG)
-
+<img src="Various\CMD_Output.PNG" style="zoom:100%" alt="CMD_Output"/>
 
 
 **Figure 4:** Potential cleavage analysis command line output. The command line shows the loaded input files (fasta- and proteoform txt-file), the number of considered subsequence proteoforms and the number of potential cleavage events.  
@@ -155,7 +177,7 @@ The tool identifies the X and X’ cleavage site of subsequence proteoforms, whe
 
 The tool calculates all theoretical proteoform termini of all proteins in the database (that is, it basically calculates the number of all dipeptide combinations in the database). 
 
-<img src="Various\Result_AnalyzeFastaFile.png" style="zoom:95%" alt="Result_Methionin_Cleavage"/>
+<img src="Various\Result_AnalyzeFastaFile.png" style="zoom:95%" alt="Result_AnalyzeFastaFile"/>
 
 **Figure 5**: Theoretical possible cleavage events in the entire fasta file. 
 
@@ -165,7 +187,7 @@ The tool calculates all theoretical proteoform termini of all proteins in the da
 
 The tool identifies all proteoforms whose N-terminus is not truncated, or where only the start methionine is cleaved. The influence of the following amino acid and its size on methionine cleavage is analyzed. 
 
-<img src="Various\Result_Methionin_Cleavage_relativeAndAbsolut.png" style="zoom:57%" alt="Result_Methionin_Cleavage"/>
+<img src="Various\Result_Methionin_Cleavage_relativeAndAbsolut.png" style="zoom:57%" alt="Result_Methionin_Cleavage_relative"/>
 
 **Figure 6**: Plots displaying the N-terminal methionine cleavage excision properties. A) bar plot showing the count of amino acids at the N-term if the start methionine is cleaved (red bars, Met cleaved) and in the position after the methionine if the start methionine is not cleaved (black bars, Met not-cleaved). B) shows the percentage of methionine cleavage before a given amino acid, with the amino acid radius shown on the x-axis.  
 
@@ -179,7 +201,7 @@ The tool identifies the number of annotated, N-terminal, C-terminal and N- and C
 
 
 
-<img src="Various\Result_Truncation_PieChart.png" style="zoom:85%" alt="Result_ProteoformVisualization"/>
+<img src="Various\Result_Truncation_PieChart.png" style="zoom:85%" alt="Result_Proteoform_Truncation_PieChart"/>
 
 **Figure 7**: Percentage of identified C-terminal, N-terminal, C- and N-terminal or non-truncated (full length) proteoforms displayed as a pie chart. 
 
@@ -213,7 +235,7 @@ The tool identifies the number of annotated, N-terminal, C-terminal and N- and C
 
 
 
-## Trouble shooting
+## Troubleshooting
 
 
 
